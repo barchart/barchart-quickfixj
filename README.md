@@ -1,4 +1,2 @@
-barchart-quickfixj
-==================
-
-QuickFIX/J fork
+quickfixj-tinkering
+===================
