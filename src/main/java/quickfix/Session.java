@@ -66,7 +66,6 @@ import quickfix.field.TargetLocationID;
 import quickfix.field.TargetSubID;
 import quickfix.field.TestReqID;
 import quickfix.field.Text;
-import quickfix.fix41.Logon;
 
 /**
  * The Session is the primary FIX abstraction for message communication. It
@@ -1616,7 +1615,8 @@ public class Session implements Closeable {
                 doTargetTooLow(msg);
                 return false;
             }
-            if (Logon.MSGTYPE.equals(msgType) && checkTooLow && isOtherSideTooHigh(msg)) {
+            // Made a change here, need
+            if ("Logon".equals(msgType) && checkTooLow && isOtherSideTooHigh(msg)) {
                 doOtherSideTooHigh(msg);
                 return false;
             }
