@@ -871,11 +871,11 @@ public class Session implements Closeable {
         final String msgType = header.getString(MsgType.FIELD);
 
         // QFJ-650
-        if (!header.isSetField(MsgSeqNum.FIELD)) {
-            generateLogout("Received message without MsgSeqNum");
-            disconnect("Received message without MsgSeqNum: " + message, true);
-            return;
-        }
+//        if (!header.isSetField(MsgSeqNum.FIELD)) {
+//            generateLogout("Received message without MsgSeqNum");
+//            disconnect("Received message without MsgSeqNum: " + message, true);
+//            return;
+//        }
 
         try {
 

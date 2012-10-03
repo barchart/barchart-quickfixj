@@ -154,7 +154,7 @@ public class FIXMessageDecoder implements MessageDecoder {
                     in.position(headerOffset);
 
                     if (log.isDebugEnabled()) {
-                        log.debug("detected header: " + getBufferDebugInfo(in));
+                        //log.debug("detected header: " + getBufferDebugInfo(in));
                     }
 
                     position = headerOffset + bufPos._length;
@@ -173,9 +173,8 @@ public class FIXMessageDecoder implements MessageDecoder {
                     if (ch == '\001') {
                         state = READING_BODY;
                         if (log.isDebugEnabled()) {
-                            log
-                                    .debug("body length = " + bodyLength + ": "
-                                            + getBufferDebugInfo(in));
+//                            log.debug("body length = " + bodyLength + ": "
+//                                            + getBufferDebugInfo(in));
                         }
                     } else {
                         if (hasRemaining(in)) {
@@ -197,14 +196,14 @@ public class FIXMessageDecoder implements MessageDecoder {
                     position += bodyLength;
                     state = PARSING_CHECKSUM;
                     if (log.isDebugEnabled()) {
-                        log.debug("message body found: " + getBufferDebugInfo(in));
+                        //log.debug("message body found: " + getBufferDebugInfo(in));
                     }
                 }
 
                 if (state == PARSING_CHECKSUM) {
                     if (startsWith(in, position, CHECKSUM_PATTERN) > 0) {
                         if (log.isDebugEnabled()) {
-                            log.debug("found checksum: " + getBufferDebugInfo(in));
+                            //log.debug("found checksum: " + getBufferDebugInfo(in));
                         }
                         position += CHECKSUM_PATTERN.length;
                     } else {
