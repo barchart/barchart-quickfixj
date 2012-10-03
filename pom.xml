@@ -13,7 +13,7 @@
   	<version>1.0.1-SNAPSHOT</version>
   	<packaging>bundle</packaging>
   	
-  		<scm>
+  	<scm>
 		<url>https://github.com/barchart/barchart-quickfixj</url>
 		<connection>scm:git:git://github.com/barchart/barchart-quickfixj.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/barchart/barchart-quickfixj.git</developerConnection>

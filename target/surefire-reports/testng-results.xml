@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="quickfix.Test" duration-ms="2" started-at="2012-10-03T09:34:49Z" finished-at="2012-10-03T09:34:49Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="2" started-at="2012-10-03T09:34:49Z" finished-at="2012-10-03T09:34:49Z">
+    </test> <!-- Command line test -->
+  </suite> <!-- quickfix.Test -->
+</testng-results>
