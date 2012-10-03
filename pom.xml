@@ -13,6 +13,13 @@
   	<version>1.0.1-SNAPSHOT</version>
   	<packaging>bundle</packaging>
   	
+  		<scm>
+		<url>https://github.com/barchart/barchart-quickfixj</url>
+		<connection>scm:git:git://github.com/barchart/barchart-quickfixj.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/barchart/barchart-quickfixj.git</developerConnection>
+	</scm>
+	
+  		
   	<dependencies>
   	
   		<dependency>
@@ -29,15 +36,8 @@
 		
 		<dependency>
 			<groupId>org.apache.mina</groupId>
-			<artifactId>mina-filter-ssl</artifactId>
+			<artifactId>mina-filter-ssl-wrapped</artifactId>
 			<version>1.1.7</version>
-			<scope>optional</scope>
-			<exclusions>
-				<exclusion>
-					<artifactId>mina-core</artifactId>
-					<groupId>org.apache.mina</groupId>
-				</exclusion>
-			</exclusions>
 		</dependency>
   	
   		<dependency>
