@@ -211,7 +211,8 @@ public abstract class FieldMap implements Serializable {
     }
 
     StringField getField(int field) throws FieldNotFound {
-        final StringField f = (StringField) fields.get(field);
+        //final StringField f = (StringField) fields.get(field);
+    	final StringField f = new StringField(field, fields.get(field).objectAsString()); 
         if (f == null) {
             throw new FieldNotFound(field);
         }

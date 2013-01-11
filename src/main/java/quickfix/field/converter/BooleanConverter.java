@@ -27,6 +27,9 @@ import quickfix.FieldConvertError;
 public class BooleanConverter {
     private static final String NO = "N";
     private static final String YES = "Y";
+    
+    private static final String TRUE = "true";
+    private static final String FALSE = "false";
 
     /**
      * Converts a boolean to a String.
@@ -46,9 +49,9 @@ public class BooleanConverter {
      * @throws FieldConvertError raised for any value other than "Y" or "N".
      */
     public static boolean convert(String value) throws FieldConvertError {
-        if (YES.equals(value)) {
+        if (YES.equals(value) || TRUE.equals(value)) {
             return true;
-        } else if (NO.equals(value)) {
+        } else if (NO.equals(value) || FALSE.equals(value)) {
             return false;
         } else {
             throw new FieldConvertError("invalid boolean value: " + value);
