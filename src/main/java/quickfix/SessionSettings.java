@@ -569,7 +569,7 @@ public class SessionSettings {
         }
     }
 
-    private final Pattern variablePattern = Pattern.compile("\\$\\{(.+?)}");
+    private final Pattern variablePattern = Pattern.compile("\\$\\{(.+?)\\}");
 
     private String interpolate(String value) {
         if (value == null || value.indexOf('$') == -1) {
