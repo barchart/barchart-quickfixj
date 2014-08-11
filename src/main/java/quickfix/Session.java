@@ -869,7 +869,7 @@ public class Session implements Closeable {
 
         final Header header = message.getHeader();
         final String msgType = header.getString(MsgType.FIELD);
-
+        
         // QFJ-650
 //        if (!header.isSetField(MsgSeqNum.FIELD)) {
 //            generateLogout("Received message without MsgSeqNum");
@@ -2073,7 +2073,6 @@ public class Session implements Closeable {
     private boolean nextQueued(int num) throws FieldNotFound, RejectLogon, IncorrectDataFormat,
             IncorrectTagValue, UnsupportedMessageType, IOException, InvalidMessage {
         final Message msg = state.dequeue(num);
-
         if (msg != null) {
             getLog().onEvent("Processing queued message: " + num);
 

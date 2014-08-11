@@ -461,7 +461,7 @@ public class Message extends FieldMap {
     void parse(String messageData, DataDictionary sessionDataDictionary,
             DataDictionary applicationDataDictionary, boolean doValidation) throws InvalidMessage {
         this.messageData = messageData;
-
+        
         try {
             parseHeader(sessionDataDictionary, doValidation);
             parseBody(applicationDataDictionary, doValidation);
@@ -823,6 +823,11 @@ public class Message extends FieldMap {
         } catch (final InvalidMessage e) {
             throw new MessageParseError(e.getMessage(), e);
         }
+
+    }
+    
+    public String messageData() {
+    	return messageData;
     }
 
 }
