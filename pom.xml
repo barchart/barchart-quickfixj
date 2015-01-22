@@ -10,14 +10,14 @@
   
   	<groupId>barchart-trader</groupId>
   	<artifactId>barchart-quickfixj</artifactId>
-  	<version>1.0.4</version>
+  	<version>1.0.5-SNAPSHOT</version>
   	<packaging>bundle</packaging>
   	
   	<scm>
 		<url>https://github.com/barchart/barchart-quickfixj</url>
 		<connection>scm:git:git://github.com/barchart/barchart-quickfixj.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/barchart/barchart-quickfixj.git</developerConnection>
-	  <tag>barchart-quickfixj-1.0.4</tag>
+	  <tag>HEAD</tag>
   </scm>
 	
   		
