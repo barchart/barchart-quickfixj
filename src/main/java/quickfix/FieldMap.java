@@ -57,6 +57,11 @@ public abstract class FieldMap implements Serializable {
     private final TreeMap<Integer, List<Group>> groups = new TreeMap<Integer, List<Group>>();
 
     protected FieldMap(int[] fieldOrder) {
+    	
+    	if(fieldOrder != null && fieldOrder[0] == 11) {
+    		new RuntimeException().printStackTrace();
+    	}
+    	
         this.fieldOrder = fieldOrder;
         fields = new TreeMap<Integer, Field<?>>(fieldOrder != null
                 ? new FieldOrderComparator()
